@@ -3,13 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
     <link rel="stylesheet" href="styles.css">
+
     <title>Elegant</title>
+
+    <style>
+        html,
+        body {
+          position: relative;
+          height: 100%;
+        }
+    
+        body {
+          background: #eee;
+          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+          font-size: 14px;
+          color: #000;
+          margin: 0;
+          padding: 0;
+        }
+    
+        .swiper {
+          width: 100%;
+          height: 100%;
+        }
+    
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+    
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+    
+        .swiper-slide {
+          width: 60%;
+        }
+    
+        .swiper-slide:nth-child(2n) {
+          width: 40%;
+        }
+    
+        .swiper-slide:nth-child(3n) {
+          width: 20%;
+        }
+      </style>
 </head>
 
 <body class="">
 
-    <header class="bg-primary">
+<!--     <header class="bg-primary">
         <div class=" pt-5 pb-5 shadow-2xl">
             <div class="container mx-auto flex justify-between items-center">
 
@@ -87,7 +141,7 @@
                         Experience music like never before
                     </p>
 
-                    <button class="text-slate-100 bg-neutral p-5 mt-5 w-64 rounded-xl hover:shadow-xl hover:bg-white hover:text-black transition-all ease-in">Shopping Now</button>
+                    <button class="text-slate-100  p-5 mt-5 w-64 btn">Shopping Now</button>
 
                 </div>
 
@@ -124,10 +178,48 @@
 
 
 
-    </footer>
+    </footer> -->
 
+<!--     <section>
+        <h1>New Products</h1>
+
+        <div class="grid align-middle items-center grid-rows-1 absolute w-48 content-start" id="items">
+
+        </div>
+
+            
+    </section> -->
+
+<section id="products">
+
+</section>
+
+
+  <!-- Swiper -->
+<!--   <div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+ -->
     
     <script src="script.js" async></script>
+
+<!--     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+
+  <!-- Initialize Swiper -->
+<!--   <script>
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: "auto",
+      centeredSlides: true,
+      spaceBetween: 30,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    });
+  </script> -->
 
 </body>
 </html>

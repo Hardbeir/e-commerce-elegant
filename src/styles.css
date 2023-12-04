@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
-/* .btn{
-    @apply
-} */
+.btn{
+    @apply bg-neutral rounded-xl hover:shadow-xl hover:bg-white hover:text-black transition-all ease-in;
+}
+
+.items{
+    @apply grid  w-64
+}
