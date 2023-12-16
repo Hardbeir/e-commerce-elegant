@@ -10,60 +10,11 @@
 
     <title>Elegant</title>
 
-    <style>
-        html,
-        body {
-          position: relative;
-          height: 100%;
-        }
-    
-        body {
-          background: #eee;
-          font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
-          font-size: 14px;
-          color: #000;
-          margin: 0;
-          padding: 0;
-        }
-    
-        .swiper {
-          width: 100%;
-          height: 100%;
-        }
-    
-        .swiper-slide {
-          text-align: center;
-          font-size: 18px;
-          background: #fff;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-        }
-    
-        .swiper-slide img {
-          display: block;
-          width: 100%;
-          height: 100%;
-          object-fit: cover;
-        }
-    
-        .swiper-slide {
-          width: 60%;
-        }
-    
-        .swiper-slide:nth-child(2n) {
-          width: 40%;
-        }
-    
-        .swiper-slide:nth-child(3n) {
-          width: 20%;
-        }
-      </style>
 </head>
 
 <body class="">
 
-<!--     <header class="bg-primary">
+      <header class="bg-primary">
         <div class=" pt-5 pb-5 shadow-2xl">
             <div class="container mx-auto flex justify-between items-center">
 
@@ -109,17 +60,17 @@
 
             <div class="inline-flex items-center">
 
-                <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+               <a href=""> <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
+                </svg> </a>
 
-                <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+              <a href="">  <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
+                </svg> </a>
                 
-                <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <a href=""> <svg class="w-10 mr-5" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-                </svg>
+                </svg> </a>
                 
 
             </div>
@@ -147,7 +98,7 @@
 
         </div>
 
-    </header>
+    </header> 
 
     <main>
 
@@ -171,55 +122,66 @@
         
         </section>
 
+       <section class="products">
+
+          <div class="container mx-auto">
+
+
+  
+          <div class="swiper mySwiper">
+
+            <div class="swiper-heading">
+
+              <h1 class="text-5xl font-semibold">New Arrivals</h1>
+
+              <div class="swiper-pagination"></div>
+
+            </div>
+
+
+
+            <div class="swiper-wrapper" id="products">
+  
+            </div>
+            
+          </div>
+
+      </div>
+          </div>
+  
+              
+      </section>  
+
     </main>
+
 
 
     <footer>
 
 
 
-    </footer> -->
-
-<!--     <section>
-        <h1>New Products</h1>
-
-        <div class="grid align-middle items-center grid-rows-1 absolute w-48 content-start" id="items">
-
-        </div>
-
-            
-    </section> -->
-
-<section id="products">
-
-</section>
-
-
-  <!-- Swiper -->
-<!--   <div class="swiper mySwiper">
-    <div class="swiper-wrapper">
-
-    </div>
-    <div class="swiper-pagination"></div>
-  </div>
- -->
+    </footer>
     
     <script src="script.js" async></script>
 
-<!--     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script> -->
+<!-- Swiper JS -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-  <!-- Initialize Swiper -->
-<!--   <script>
-    var swiper = new Swiper(".mySwiper", {
-      slidesPerView: "auto",
-      centeredSlides: true,
-      spaceBetween: 30,
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      },
-    });
-  </script> -->
+<!-- Initialize Swiper -->
+<script>
+  var swiper = new Swiper(".mySwiper", {
+    slidesPerView: 4,
+    spaceBetween: 30,
+    freeMode: true,
+    mousewheel: true,
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true
+/*       type: "fraction", */
+    },
+  });
+</script>
 
 </body>
 </html>

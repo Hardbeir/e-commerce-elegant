@@ -2,8 +2,11 @@
 module.exports = {
   content: ["./public/index.html","./src/**/*.{html,js}"],
   theme: {
-    extend: {
 
+    extend: {
+      spacing: {
+        '95%': '95%',
+      },
       colors: {
         primary: '#FEC75A',
         secondary: '#377DFF',
