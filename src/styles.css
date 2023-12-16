@@ -8,23 +8,27 @@ section {
     @apply pt-10
 }
 
+.title{
+    @apply text-5xl font-semibold
+}
+
 .btn{
     @apply bg-neutral rounded-xl hover:shadow-xl hover:bg-white hover:text-black transition-all ease-in;
 }
 
-.items-cards{
+.items-arrivals{
     @apply flex flex-col justify-start pt-5 rounded-lg
 }
 
-.items-cards img {
+.items-arrivals img {
     @apply w-96
 }
 
-.items-cards .content{
+.items-arrivals .content{
     @apply text-left leading-7 font-semibold pt-2
 }
 
-.items-cards .content .content-stars{
+.items-arrivals .content .content-stars{
     @apply flex
 }
 
@@ -58,7 +62,7 @@ section {
 }
 
 .swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-     @apply before:content-['']  border-4 w-4 h-4
+     @apply  border-4 w-4 h-4 border-green-400
 }
 
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{

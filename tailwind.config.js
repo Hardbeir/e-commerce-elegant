@@ -8,7 +8,7 @@ module.exports = {
         '95%': '95%',
       },
       colors: {
-        primary: '#FEC75A',
+        primary: '#459068',
         secondary: '#377DFF',
         neutral: '#141718',
       },

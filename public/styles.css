@@ -570,6 +570,26 @@ video {
   }
 }
 
+.col-span-1{
+  grid-column: span 1 / span 1;
+}
+
+.row-span-2{
+  grid-row: span 2 / span 2;
+}
+
+.row-span-3{
+  grid-row: span 3 / span 3;
+}
+
+.row-span-full{
+  grid-row: 1 / -1;
+}
+
+.m-auto{
+  margin: auto;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -623,8 +643,16 @@ video {
   width: auto;
 }
 
+.grid-flow-col{
+  grid-auto-flow: column;
+}
+
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-rows-2{
+  grid-template-rows: repeat(2, minmax(0, 1fr));
 }
 
 .items-center{
@@ -643,9 +671,13 @@ video {
   justify-items: center;
 }
 
+.gap-4{
+  gap: 1rem;
+}
+
 .bg-primary{
   --tw-bg-opacity: 1;
-  background-color: rgb(254 199 90 / var(--tw-bg-opacity));
+  background-color: rgb(69 144 104 / var(--tw-bg-opacity));
 }
 
 .p-5{
@@ -668,11 +700,6 @@ video {
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
-}
-
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 
 .text-8xl{
@@ -704,6 +731,12 @@ section{
   padding-top: 2.5rem;
 }
 
+.title{
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 600;
+}
+
 .btn{
   border-radius: 0.75rem;
   --tw-bg-opacity: 1;
@@ -724,7 +757,7 @@ section{
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.items-cards{
+.items-arrivals{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -732,18 +765,18 @@ section{
   padding-top: 1.25rem;
 }
 
-.items-cards img{
+.items-arrivals img{
   width: 24rem;
 }
 
-.items-cards .content{
+.items-arrivals .content{
   padding-top: 0.5rem;
   text-align: left;
   font-weight: 600;
   line-height: 1.75rem;
 }
 
-.items-cards .content .content-stars{
+.items-arrivals .content .content-stars{
   display: flex;
 }
 
@@ -784,11 +817,8 @@ section{
   height: 1rem;
   width: 1rem;
   border-width: 4px;
-}
-
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main::before{
-  --tw-content: '';
-  content: var(--tw-content);
+  --tw-border-opacity: 1;
+  border-color: rgb(74 222 128 / var(--tw-border-opacity));
 }
 
 .swiper-horizontal>.swiper-pagination-bullets.swiper-pagination-bullets-dynamic, .swiper-pagination-horizontal.swiper-pagination-bullets.swiper-pagination-bullets-dynamic{
