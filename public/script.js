@@ -39,6 +39,16 @@ fetch('https://mock.shop/api?query=%7B%20products(first%3A%2020)%20%7B%20edges%2
         .then(data => {
             const products = data.data.products.edges;
 
+            //sort product in section bestSeller
+            products.sort((a, b) => {
+                const priceA = a.node.variants.edges[0].node.price.amount;
+                const priceB = b.node.variants.edges[0].node.price.amount;
+                return priceA - priceB;
+            });
+
+            // Limiting the output to 8 items
+                const limitedProducts = products.slice(0, 8);
+
             // Create HTML for each product
             const productsHTML = products.map(product => {
                 const { id, title, description, featuredImage, variants } = product.node;
@@ -49,7 +59,7 @@ fetch('https://mock.shop/api?query=%7B%20products(first%3A%2020)%20%7B%20edges%2
                 return `
                     <div class="swiper-slide items-arrivals">
                         <img src="${url}" alt="${title}">
-                    <div class="content">
+                   <div class="content">
 
                     <div class="content-stars">
                         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -79,5 +89,46 @@ fetch('https://mock.shop/api?query=%7B%20products(first%3A%2020)%20%7B%20edges%2
 
             // Add products to the HTML
             document.getElementById('products').innerHTML = productsHTML;
+            
         })
         .catch(error => console.error('Error:', error));
+
+
+fetch('https://mock.shop/api?query=%7B%20products(first%3A%2020)%20%7B%20edges%20%7B%20node%20%7B%20id%20title%20description%20featuredImage%20%7B%20id%20url%20%7D%20variants(first%3A%203)%20%7B%20edges%20%7B%20node%20%7B%20price%20%7B%20amount%20currencyCode%20%7D%20%7D%20%7D%20%7D%20%7D%20%7D%20%7D%7D')
+    .then(response => response.json())
+    .then(data => {
+        const products = data.data.products.edges;
+
+        // Sorting products by price
+        products.sort((a, b) => {
+            const priceA = a.node.variants.edges[0].node.price.amount;
+            const priceB = b.node.variants.edges[0].node.price.amount;
+            return priceA - priceB;
+        });
+
+        // Limiting the output to 8 items
+        const limitedProducts = products.slice(0, 8);
+
+        // Create HTML for each product
+        const productsHTML = limitedProducts.map(product => {
+            const { id, title, description, featuredImage, variants } = product.node;
+            const { url } = featuredImage;
+            const price = variants.edges[0].node.price.amount;
+            const currencyCode = variants.edges[0].node.price.currencyCode;
+
+            return `
+                <div class="items-arrivals">
+
+                        <img src="${url}" alt="${title}"> 
+                        <!-- Stars HTML here -->
+                        <p class="text-base font-semibold">${title}</p>
+                        <p class="font-semibold">$ ${price}</p>
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        // Add products to the HTML
+        document.getElementById('productsSort').innerHTML = productsHTML;
+    })
+    .catch(error => console.error('Error:', error));

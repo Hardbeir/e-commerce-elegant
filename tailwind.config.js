@@ -11,7 +11,11 @@ module.exports = {
         primary: '#459068',
         secondary: '#377DFF',
         neutral: '#141718',
+        grayLight: '#F3F5F7',
       },
+      borderWidth: {
+        1: '1px',
+      }
 
     },
   },

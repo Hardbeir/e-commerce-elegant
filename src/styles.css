@@ -21,8 +21,9 @@ section {
 }
 
 .items-arrivals img {
-    @apply w-96
+    @apply w-96 relative
 }
+
 
 .items-arrivals .content{
     @apply text-left leading-7 font-semibold pt-2
@@ -47,6 +48,7 @@ section {
   }
 
 .swiper-slide img {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
@@ -77,3 +79,6 @@ section {
     @apply text-right
 }
 
+.product__sort{
+    @apply grid grid-cols-4 grid-rows-2 gap-4
+}
