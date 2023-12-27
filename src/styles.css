@@ -5,11 +5,31 @@
 @tailwind utilities;
 
 section {
-    @apply pt-10
+    @apply pt-20
+}
+
+.logo{
+    @apply text-3xl font-semibold
+}
+
+.svg__hover :hover svg path {
+    @apply bg-grayLight fill-secondary
 }
 
 .title{
-    @apply text-5xl font-semibold
+    @apply text-5xl font-semibold mb-10
+}
+
+.link {
+    @apply hover:text-grayText
+}
+
+.collection-link{
+    @apply hover:text-primary 
+}
+
+nav ul li a {
+    @apply hover:text-grayText
 }
 
 .btn{
