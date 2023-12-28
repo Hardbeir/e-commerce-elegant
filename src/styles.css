@@ -4,8 +4,16 @@
 @tailwind components;
 @tailwind utilities;
 
+.container{
+    @apply md:px-5 max-md:px-2
+}
+
+img{
+    @apply w-44
+}
+
 section {
-    @apply pt-20
+    @apply pt-20 
 }
 
 .logo{
@@ -17,7 +25,7 @@ section {
 }
 
 .title{
-    @apply text-5xl font-semibold mb-10
+    @apply text-5xl font-semibold mb-10 max-lg:text-center max-lg:text-4xl;
 }
 
 .link {
@@ -74,6 +82,10 @@ nav ul li a {
     height: 100%;
     object-fit: cover;
   }
+
+.swiper-slide .items-arrivals img{
+    width: 250px;
+}
 
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
     @apply top-5 bottom-0

@@ -17,10 +17,17 @@
     <header class="bg-primary" id="home">
         <div class=" pt-5 pb-5 shadow-2xl">
             <div class="container mx-auto flex justify-between items-center">
+              
+              <div class="items-center inline-flex gap-2">
+                <svg  class="w-6 h-6 hidden max-lg:block max-lg:hover:text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" >
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
 
-        <h1 class="logo">3Legant.</h1>
+                <h1 class="logo">3Legant.</h1>
+            </div>
+              
 
-        <nav class="mr-5">
+        <nav class="mr-5 max-lg:hidden">
 
             <ul class="inline-flex">
 
@@ -78,21 +85,21 @@
 
         </div>
 
-                <div class="container mx-auto pt-5 grid grid-cols-2 justify-items-center items-center">
+                <div class="container mx-auto pt-5 grid grid-cols-2 justify-items-center items-center md:gap-5">
 
-                    <img class="w-auto" src="img/header.png" alt="">
+                    <img class="w-auto max-md:pt-28" src="img/header.png" alt="">
 
-                    <div class="">
+                    <div class=" max-md:pt-10">
 
-                    <h4 class="text-8xl font-semibold">
+                    <h4 class="text-8xl font-semibold md:text-4xl max-md:text-3xl">
                         Search to <br/> the <span class="text-white">amazing</span> you're styles.
                     </h4>
 
                     <p class="text-2xl mt-5">
-                        Experience music like never before
+                        Experience styles like never before
                     </p>
 
-                    <button class="text-slate-100  p-5 mt-5 w-64 btn">Shopping Now</button>
+                    <button class="text-slate-100  p-5 mt-5 w-full btn max-md:p-0">Shopping Now</button>
 
                 </div>
 
@@ -104,7 +111,7 @@
 
         <section>
 
-             <div class="flex justify-evenly mt-5">
+             <div class="flex justify-evenly max-lg:gap-5 mt-5 lg:flex-wrap max-lg:flex-wrap">
 
                 <img src="img/logoipum/logoipum-1.png" alt="">
 
@@ -158,13 +165,13 @@
 
         <h1 class="title">Shop Collection</h1>
 
-        <div class="blocks grid grid-flow-col grid-rows-2 gap-4">
+        <div class="blocks grid grid-flow-col grid-rows-2 gap-4 max-lg:grid-flow-row max-lg:p-5 ">
 
           <div class="block-headband row-span-3 bg-grayLight  flex items-center justify-center flex-col ">
 
             <img src="img/collections/headband.png" alt="">
 
-            <div class="content pr-72 pt-20">
+            <div class="content pr-72 pt-20 max-md:pr-20 max-md:pt-10 ">
 
               <h1 class="title">Headband</h1>
 
@@ -182,7 +189,7 @@
 
           </div>
 
-          <div class="block-earbuds col-span-1 bg-grayLight flex flex-row-reverse justify-around items-center">
+          <div class="block-earbuds col-span-1 bg-grayLight flex flex-row-reverse justify-around items-center max-md:flex-col">
 
             <img src="img/collections/Earbuds.png" alt="">
 
@@ -203,7 +210,7 @@
 
           </div>
 
-          <div class="block-accessories row-span-2 bg-grayLight flex flex-row-reverse justify-around items-center">
+          <div class="block-accessories row-span-2 bg-grayLight flex flex-row-reverse justify-around items-center max-md:flex-col">
 
             <img src="img/collections/Accessories.png" alt="">
 
@@ -246,8 +253,8 @@
 
 
        <section class="promotion" id="promoution">
-        <div class="promotion grid grid-cols-2 gap-0 justify-items-stretch">
-        <img src="img/promotion.png" alt="">
+        <div class="promotion grid grid-cols-2 gap-0 justify-items-stretch max-lg:grid-cols-none">
+        <img class="w-full h-full max-lg:hidden" src="img/promotion.png" alt="">
         
         <div class="content bg-orange-200 grid justify-start justify-items-start content-evenly p-20">
 
@@ -273,21 +280,21 @@
 
         <div class="container m-auto pt-10">
 
-          <div class="flex justify-evenly">
+          <div class="flex justify-evenly max-lg:flex-wrap md:gap-20 max-md:gap-5">
   
             <div class="block bg-grayLight p-10">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
               </svg>
   
-              <div class="content mt-2 leading-10">
+              <div class="content mt-2 leading-10 max-md:p-3">
                 <h2 class="font-bold text-xl font-semibold">Free Shipping</h2>
                 <p class="text-gray-400">Order abowe $200</p>
               </div>
   
             </div>
   
-            <div class="block bg-grayLight p-10">
+            <div class="block bg-grayLight p-10 max-md:p-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
               </svg>
@@ -300,7 +307,7 @@
   
             </div>
   
-            <div class="block bg-grayLight p-10">
+            <div class="block bg-grayLight p-10 max-md:p-3">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" />
               </svg>
@@ -313,7 +320,7 @@
   
             </div>
   
-            <div class="block bg-grayLight p-10">
+            <div class="block bg-grayLight p-10 max-md:p-8">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" class="w-14 h-14">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
               </svg>            
@@ -342,7 +349,7 @@
             <a href="#" class="text-gray-500 font-semibold">@3legant_media</a>
           </div>
 
-          <div class="images flex flex-row justify-evenly">
+          <div class="images flex flex-row justify-evenly max-lg:flex-wrap max-lg:gap-2">
             <img src="img/social/forest/Instagram/Elements/Paste image.png" alt="">
             <img src="img/social/summer/Instagram/Elements/Paste image.png" alt="">
             <img src="img/social/spring/Instagram/Elements/Paste image.png" alt="">
@@ -387,19 +394,19 @@
 
 
 
-    <footer class="bg-black text-white mt-24">
+   <footer class="bg-black text-white mt-24">
 
       <div class="container mx-auto">
 
-     <div class="footer-head flex justify-between border-b-grayLight py-5%">
-      <div class="content flex items-center gap-2">
+     <div class="footer-head flex justify-between border-b-grayLight py-5% ">
+      <div class="content flex items-center gap-2 max-md:flex-col">
 
-      <h1 class="logo border-r-1 pr-5 border-gray-500">3legant</h1> <p>Shop your style</p>
+      <h1 class="logo border-r-1 pr-5 border-gray-500 max-md:border-b-1 max-md:border-r-0 max-md:pb-3">3legant</h1> <p>Shop your style</p>
 
        </div>
 
       <nav class="">
-        <ul class="flex gap-5">
+        <ul class="flex gap-5 max-md:flex-wrap max-md:justify-center">
           <li><a href="#home" class="hover:text-primary">Home</a></li>
           <li><a href="#collection" class="hover:text-primary">Shop</a></li>
           <li><a href="#product" class="hover:text-primary">Product</a></li>
@@ -412,13 +419,13 @@
 
     <div class="footer-bottom flex justify-between items-center pt-5 pb-10 border-t-1 border-gray-500">
 
-      <div class="copyright inline-flex gap-10">
+      <div class="copyright inline-flex gap-10 max-md:gap-5 max-md:flex-col max-md:text-center">
         <p>Copyright © 2023 3legant. All rights reserved</p>
         <a href="#" class="hover:text-primary">Privacy Policy</a>
         <a href="#" class="hover:text-primary">Terms of Use</a>
       </div>
 
-      <div class="social inline-flex gap-5">
+      <div class="social inline-flex gap-5 max-md:flex-col">
 
         <a href="#" class="hover:text-primary">
           <svg class="w-10 h-10" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -454,7 +461,7 @@
     </div>
 
       </div>  
-    </footer>
+    </footer> 
     
     <script src="script.js" async></script>
 

@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:wght@400;700&family=DM+Sans:wght@400;500;700&family=Nova+Square&family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 
 /*
-! tailwindcss v3.3.5 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.0 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -34,9 +34,11 @@
 4. Use the user's configured `sans` font-family by default.
 5. Use the user's configured `sans` font-feature-settings by default.
 6. Use the user's configured `sans` font-variation-settings by default.
+7. Disable tap highlights on iOS
 */
 
-html {
+html,
+:host {
   line-height: 1.5;
   /* 1 */
   -webkit-text-size-adjust: 100%;
@@ -46,12 +48,14 @@ html {
   -o-tab-size: 4;
      tab-size: 4;
   /* 3 */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   /* 4 */
   font-feature-settings: normal;
   /* 5 */
   font-variation-settings: normal;
   /* 6 */
+  -webkit-tap-highlight-color: transparent;
+  /* 7 */
 }
 
 /*
@@ -123,8 +127,10 @@ strong {
 }
 
 /*
-1. Use the user's configured `mono` font family by default.
-2. Correct the odd `em` font sizing in all browsers.
+1. Use the user's configured `mono` font-family by default.
+2. Use the user's configured `mono` font-feature-settings by default.
+3. Use the user's configured `mono` font-variation-settings by default.
+4. Correct the odd `em` font sizing in all browsers.
 */
 
 code,
@@ -133,8 +139,12 @@ samp,
 pre {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
   /* 1 */
-  font-size: 1em;
+  font-feature-settings: normal;
   /* 2 */
+  font-variation-settings: normal;
+  /* 3 */
+  font-size: 1em;
+  /* 4 */
 }
 
 /*
@@ -639,6 +649,10 @@ video {
   display: grid;
 }
 
+.hidden{
+  display: none;
+}
+
 .h-10{
   height: 2.5rem;
 }
@@ -649,6 +663,10 @@ video {
 
 .h-6{
   height: 1.5rem;
+}
+
+.h-full{
+  height: 100%;
 }
 
 .w-10{
@@ -667,16 +685,16 @@ video {
   width: 1.5rem;
 }
 
-.w-64{
-  width: 16rem;
-}
-
 .w-96{
   width: 24rem;
 }
 
 .w-auto{
   width: auto;
+}
+
+.w-full{
+  width: 100%;
 }
 
 .cursor-pointer{
@@ -954,6 +972,24 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
+@media not all and (min-width: 768px){
+  .container{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (min-width: 768px){
+  .container{
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}
+
+img{
+  width: 11rem;
+}
+
 section{
   padding-top: 5rem;
 }
@@ -975,6 +1011,14 @@ section{
   font-size: 3rem;
   line-height: 1;
   font-weight: 600;
+}
+
+@media not all and (min-width: 1024px){
+  .title{
+    text-align: center;
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
 }
 
 .link:hover{
@@ -1058,6 +1102,10 @@ nav ul li a:hover{
      object-fit: cover;
 }
 
+.swiper-slide .items-arrivals img{
+  width: 250px;
+}
+
 .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
   top: 1.25rem;
   bottom: 0px;
@@ -1097,14 +1145,14 @@ nav ul li a:hover{
   gap: 1rem;
 }
 
-.hover\:text-primary:hover{
-  --tw-text-opacity: 1;
-  color: rgb(69 144 104 / var(--tw-text-opacity));
-}
-
 .hover\:text-grayLight:hover{
   --tw-text-opacity: 1;
   color: rgb(243 245 247 / var(--tw-text-opacity));
+}
+
+.hover\:text-primary:hover{
+  --tw-text-opacity: 1;
+  color: rgb(69 144 104 / var(--tw-text-opacity));
 }
 
 .focus\:border-none:focus{
@@ -1114,4 +1162,127 @@ nav ul li a:hover{
 .focus\:outline-none:focus{
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media not all and (min-width: 1024px){
+  .max-lg\:block{
+    display: block;
+  }
+
+  .max-lg\:hidden{
+    display: none;
+  }
+
+  .max-lg\:grid-flow-row{
+    grid-auto-flow: row;
+  }
+
+  .max-lg\:grid-cols-none{
+    grid-template-columns: none;
+  }
+
+  .max-lg\:flex-wrap{
+    flex-wrap: wrap;
+  }
+
+  .max-lg\:gap-2{
+    gap: 0.5rem;
+  }
+
+  .max-lg\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .max-lg\:p-5{
+    padding: 1.25rem;
+  }
+
+  .max-lg\:hover\:text-white:hover{
+    --tw-text-opacity: 1;
+    color: rgb(255 255 255 / var(--tw-text-opacity));
+  }
+}
+
+@media not all and (min-width: 768px){
+  .max-md\:flex-col{
+    flex-direction: column;
+  }
+
+  .max-md\:flex-wrap{
+    flex-wrap: wrap;
+  }
+
+  .max-md\:justify-center{
+    justify-content: center;
+  }
+
+  .max-md\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .max-md\:border-b-1{
+    border-bottom-width: 1px;
+  }
+
+  .max-md\:border-r-0{
+    border-right-width: 0px;
+  }
+
+  .max-md\:p-0{
+    padding: 0px;
+  }
+
+  .max-md\:p-3{
+    padding: 0.75rem;
+  }
+
+  .max-md\:p-8{
+    padding: 2rem;
+  }
+
+  .max-md\:pb-3{
+    padding-bottom: 0.75rem;
+  }
+
+  .max-md\:pr-20{
+    padding-right: 5rem;
+  }
+
+  .max-md\:pt-10{
+    padding-top: 2.5rem;
+  }
+
+  .max-md\:pt-28{
+    padding-top: 7rem;
+  }
+
+  .max-md\:text-center{
+    text-align: center;
+  }
+
+  .max-md\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:gap-20{
+    gap: 5rem;
+  }
+
+  .md\:gap-5{
+    gap: 1.25rem;
+  }
+
+  .md\:text-4xl{
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:flex-wrap{
+    flex-wrap: wrap;
+  }
 }
